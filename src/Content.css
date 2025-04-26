@@ -1,0 +1,315 @@
+/* Styles généraux pour le contenu */
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+.content {
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: -29px; /* Décale le contenu vers le haut */
+}
+
+.content.dark-mode {
+  background-color: #141313;
+  color: #fff;
+}
+
+.content-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-icon {
+  font-size: 20px;
+  color: #f39c12;
+}
+
+.filter-select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #f39c12;
+  outline: none;
+  cursor: pointer;
+}
+
+.filter-select:hover {
+  border-color: #d38d00;
+}
+
+/* Conteneur des catégories */
+.categories-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.added-annonce {
+  float: left; /* Laisse l'annonce à gauche */
+  margin-right: 20px; /* Ajoute de l'espace entre l'annonce et les éléments suivants */
+  width: 300px; /* Fixe une largeur pour mieux contrôler l'affichage */
+  display: block; /* S'assure que l'élément se comporte bien en bloc */
+}
+.language-selector-container {
+  margin-top: 20px; /* Ajuste la valeur selon ton besoin */
+}
+
+/* Boutons de défilement */
+.scroll-btn {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.scroll-btn:hover {
+  background-color: #333;
+  color: white;
+}
+
+.scroll-btn.left {
+  left: 10px;
+}
+
+.scroll-btn.right {
+  right: 10px;
+}
+
+/* Liste des catégories */
+.categories-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  transition: transform 0.3s ease;
+}
+
+.categorie-card {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 150px;
+  height: 180px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categorie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode .categorie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .categorie-info h4,
+.dark-mode .categorie-info p {
+  color: #fff;
+}
+
+.dark-mode .categorie-price {
+  color: #f39c12;
+}
+/* Cibler le titre "Top Catégorie" en mode sombre */
+.dark-mode .content-title {
+  color: white !important;
+}
+/* Mode sombre - Titres des catégories détaillées */
+.dark-mode .categorie-row-title .categorie-name,
+.dark-mode .categorie-info h4 {
+  color: white !important; /* Applique la couleur blanche aux titres */
+}
+
+
+.categorie-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.categorie-card h3 {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.categories-details {
+  margin-top: 40px;
+}
+
+.categorie-row {
+  margin-bottom: 20px;
+}
+
+.categorie-row-title {
+  font-size: 24px;
+  margin-left: 49px;
+  font-weight: bold;
+  color: #333;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.categorie-images-row {
+  display: flex;
+  justify-content: center; /* Centrer les images */
+  gap: 50px; /* Espacement entre les images */
+  flex-wrap: wrap; /* Permet de passer à la ligne si nécessaire */
+  align-items: center; /* Aligner les images verticalement */
+}
+
+/* Cardes des catégories détaillées */
+.categorie-card-detail {
+  display: flex;
+  flex-direction: column-reverse; /* Inverse l'ordre des éléments (image puis infos) */
+  align-items: center; /* Centrer le contenu */
+  justify-content: center; /* Centrer le contenu */
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  width: 200px;
+}
+
+.categorie-info {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.categorie-info h4 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.categorie-info p {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.categorie-location {
+  font-size: 14px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.location-icon {
+  font-size: 18px;
+  color: #f39c12;
+}
+
+.categorie-price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #f39c12;
+  margin-top: 5px;
+}
+
+.categorie-sub-image {
+  width: 220px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.delete-icon {
+  color: red;
+  cursor: pointer;
+  margin-left: 10px;
+  font-size: 20px;
+  transition: transform 0.2s ease;
+}
+
+.delete-icon:hover {
+  transform: scale(1.2);
+  color: darkred;
+}
+
+
+/* Mode sombre appliqué sur tout le body */
+.dark-mode {
+  background-color: #212324 !important; 
+   /* Fond noir pour la page */
+  color: white !important;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+/* Contenu : fond noir */
+.content.dark-mode {
+  background-color: #141313 !important;  /* Fond noir pour le contenu */
+  color: white !important;
+}
+
+/* Mode sombre pour le header */
+.dark-mode header {
+  color: white !important;
+}
+
+/* Mode sombre pour les filtres et autres boutons */
+.dark-mode .filter-select,
+.dark-mode .scroll-btn {
+   /* Pas de fond spécifique pour le filtre en mode sombre */
+  
+  border: 2px solid #f39c12 !important;  /* Garde la bordure comme en mode clair */
+}
+
+.dark-mode .filter-select:hover {
+  border-color: #d38d00 !important;
+}
+
+
+.header.dark-mode .add-annonce-button {
+  background-color: #f6b502 !important; /* Garder le fond inchangé */
+  color: #ffffff !important; /* Garder la couleur du texte inchangée */
+}
+
+/* Mode sombre pour les boutons de la page de contenu (garde le fond d'origine) */
+.dark-mode .scroll-btn {
+  background-color: transparent !important; /* Fond transparent */
+  color: inherit !important;
+  
+}
+body.dark-mode .categorie-row-title,
+body.dark-mode .categorie-info h4 {
+  color: rgb(133, 130, 130);  /* Titre des catégories en blanc */
+}

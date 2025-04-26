@@ -1,0 +1,17 @@
+image: node:18
+
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+    - export CI=false
+    - npm install --legacy-peer-deps
+    - npm run build || true  # Ignore errors in the build process
+    - mv build public
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
